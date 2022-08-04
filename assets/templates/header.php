@@ -16,7 +16,7 @@
                 <button class="btn btn-starter" id="theme-btn"><i class="bi bi-brightness-high-fill"></i></button>
 
 
-                <a class="navbar-brand text-uppercase fw-bold" href="/index.php">
+                <a class="navbar-brand text-uppercase fw-bold" href="./index.php">
                     <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Baudrien</span>
                 </a>
             
@@ -71,7 +71,7 @@
                     ...
                 </div>
                 <div class="modal-footer">
-                    <a href="/registration/registrer.php">
+                    <a href="./registration/registrer.php">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S'inscrire</button>
                     </a>
                     <button type="button" class="btn btn-primary">Se connecter</button>
