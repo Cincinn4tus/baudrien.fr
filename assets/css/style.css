@@ -20,6 +20,11 @@
     text-align: center;
 }
 
+.pwdForgotten{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .dark{
     background-color: black;
     color: white;
@@ -42,7 +47,7 @@ body{
     width: 100%;
     height: 60vh;
     position: relative;
-    background: url("/assets/img/main-image.jpg") no-repeat;
+    background: url(../img/main-image.jpg) no-repeat;
     background-size: cover;
     padding: 0;
     margin: auto;
@@ -169,7 +174,7 @@ body{
   
 
   #canada{
-    background: url("/assets/img/main-image.jpg");
+    background: url(../img/main-image.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;

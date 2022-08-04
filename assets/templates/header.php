@@ -6,7 +6,7 @@
     <title>Baudrien.fr | <?php echo $mainTitle; ?> </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
 
     <header>
@@ -59,23 +59,33 @@
 
     <body>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <a href="./registration/registrer.php">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S'inscrire</button>
-                    </a>
-                    <button type="button" class="btn btn-primary">Se connecter</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="addUser.php">
+                            <input type="email" class="form-control" name="email" placeholder="Votre email" required="required"><br>
+                            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="required"><br>
+                        
+                            <a href="#">
+                                <button class="btn btn-starter">
+                                    Mot de passe oublié ?
+                                </button>
+                            </a>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./registration/registrer.php">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S'inscrire</button>
+                        </a>
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
