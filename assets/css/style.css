@@ -34,7 +34,10 @@
     background: black;
 }
 
-
+#theme-btn{
+    color: black;
+    border: none;
+}
 
 body{
     margin-top: 60px;
