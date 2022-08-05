@@ -10,7 +10,7 @@
         <h2>Un pique-nique c'est sympathique</h2>
         <p>Avec Baudrien, c'est unique</p>
         <div>
-            <a href="#about" class="btn-get-started scrollto">Découvrir</a>
+            <a href="./catalog.php" class="btn-get-started scrollto">Découvrir</a>
         </div>
     </div>
 </section>
