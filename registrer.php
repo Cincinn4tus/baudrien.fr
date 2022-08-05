@@ -1,6 +1,6 @@
 <?php
     $mainTitle = "Inscription";
-    include("../assets/templates/header.php");
+    include("./assets/templates/header.php");
     ?>
 
 
@@ -45,5 +45,5 @@
 
 
 <?php
-    include("../assets/templates/footer.php");
+    include("./assets/templates/footer.php");
     ?>
