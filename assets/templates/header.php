@@ -11,7 +11,8 @@
 
     <header>
     <div class="container-fluid" id="main-nav">
-        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="row">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
                 
                 <button class="btn btn-starter" id="theme-btn"><i class="bi bi-brightness-high-fill"></i></button>
 
@@ -52,6 +53,7 @@
                     </ul>
                 </div>
         </nav>
+        </div>
     </div>
     </header>
 

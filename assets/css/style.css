@@ -39,9 +39,7 @@
     border: none;
 }
 
-body{
-    margin-top: 60px;
-}
+
 
 
 
@@ -176,16 +174,16 @@ body{
   }
   
 
-  #canada{
-    background: url(../img/main-image.jpg);
+  #sport{
+    background: url(../img/sport.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
   }
   
-  #egypte{
-    background: url(../img/egypte.jpg);
+  #nature{
+    background: url(../img/nature.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;

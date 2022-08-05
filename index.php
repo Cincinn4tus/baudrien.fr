@@ -22,23 +22,23 @@
     <section id="circuits">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Circuits</h2>
-          <p>14 circuits sont disponibles, choisissez celui qui vous fait rêver</p>
+          <h2>Campings thématiques</h2>
+          <p>Un voyage sur-mesure, au coeur de la nature</p>
         </div>
 
         <div class="row gy-4">
 
-          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="100" id="canada" >
+          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="100" id="sport">
             <div class="box">
-              <h3 class="title"><a href="">Canada</a></h3>
-              <p class="description">2 parcours sont disponible pour le Canada, à prix plus qu'avantageux</p>
+              <h3 class="title"><a href="">Sport</a></h3>
+              <p class="description">Randonnée, sorts d'endurance ou encore boxe, le choix s'offre à vous</p>
             </div>
           </div>
 
-          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="200" id="egypte">
+          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="200" id="nature">
             <div class="box">
-              <h3 class="title"><a href="">Egypte</a></h3>
-              <p class="description">Un très beau pays jonché de monuments histoique à découvrir</p>
+              <h3 class="title"><a href="">Botanique</a></h3>
+              <p class="description">Avec un expert, allez à la rencontre de ce que la nature a à vous offrir</p>
             </div>
           </div>
 
