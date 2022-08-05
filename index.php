@@ -70,5 +70,5 @@
 
 
 <?php
-    include("assets/templates/footer.php");
+    include("./assets/templates/footer.php");
     ?>
