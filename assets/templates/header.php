@@ -17,7 +17,7 @@
                 <button class="btn btn-starter" id="theme-btn"><i class="bi bi-brightness-high-fill"></i></button>
 
 
-                <a class="navbar-brand text-uppercase fw-bold" href="../../index.php">
+                <a class="navbar-brand text-uppercase fw-bold" href="/index.php">
                     <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Baudrien</span>
                 </a>
             
