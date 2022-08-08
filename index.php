@@ -1,7 +1,30 @@
-<?php 
+<?php
+
+    session_start();
+    require "functions.php";
     $mainTitle = "Accueil";
     include("./assets/templates/header.php");
     ?>
+
+
+
+
+
+<div class="container">
+
+	<?php 
+	if (isConnected()) {
+		?>
+    
+
+
+		<?php
+	}
+	?>
+
+</div>
+
+
 
 
 
@@ -19,6 +42,7 @@
 
 
 
+
     <section id="circuits">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -31,14 +55,14 @@
           <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="100" id="sport">
             <div class="box">
               <h3 class="title"><a href="">Sport</a></h3>
-              <p class="description">Randonnée, sorts d'endurance ou encore boxe, le choix s'offre à vous</p>
+              <p class="description">Randonnée, sports d'endurance ou encore boxe, le choix s'offre à vous</p>
             </div>
           </div>
 
           <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="200" id="nature">
             <div class="box">
               <h3 class="title"><a href="">Botanique</a></h3>
-              <p class="description">Avec un expert, allez à la rencontre de ce que la nature a à vous offrir</p>
+              <p class="description">Avec un expert, allez à la rencontre de ce que la nature vous offre</p>
             </div>
           </div>
 

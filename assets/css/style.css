@@ -3,18 +3,30 @@
     border: none;
 }
 
-
-
 .navbar-toggler{
     border: none;
-    color: darkgreen;
 }
+
 
 .navbar-toggler .collapsed{
     border: none;
 }
 
+#avatar-img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+}
 
+#user-menu .dropdown-menu{
+  padding-right: 30px;
+  justify-content: space-between;
+}
+
+#user-menu h4{
+  text-align: center;
+}
 
 .modal-title{
     text-align: center;
@@ -115,7 +127,7 @@
   }
   .section-header h2 {
     font-size: 32px;
-    color: #0c2e8a;
+    color: #4872e7;
     text-transform: uppercase;
     font-weight: 700;
     position: relative;
@@ -137,13 +149,8 @@
   }
   
 
-  .boxCountry {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #circuits  .box {
+
+  #circuits .box {
     background: white;
     text-align: center;
     align-items: center;
@@ -159,19 +166,19 @@
     padding-bottom: 20px;
   }
   
-  
-  
-  #circuits .box h4 {
-    margin-left: 100px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 30px;
-    color: orangered;
-  }
-  
   #circuits a {
     font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
+
+
+  .boxCountry {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
   
 
   #sport{
@@ -204,4 +211,15 @@
     height: 100vh;
   }
 
+
+
+
+
+  #register-form{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 2px whitesmoke;
+  }
 
