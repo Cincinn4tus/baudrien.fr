@@ -19,7 +19,14 @@
 
 
 			<h3>Inscription</h3>
-			<form method="POST" action="addUser.php">
+			<form method="POST" action="./addUser.php" required="required">
+
+
+				<select name="user_role" class="form-control">
+					<option value="1">Je cherche un camping</option>
+					<option value="2">Je loue un camping</option>
+				</select>
+
 
 				<input type="email" class="form-control" name="email" placeholder="Votre email" required="required"><br>
 
@@ -46,4 +53,5 @@
 		</div>
 	</div>
 </div>
+
 <?php include "./assets/templates/footer.php";?>

@@ -10,24 +10,6 @@
 
 
 
-<div class="container">
-
-	<?php 
-	if (isConnected()) {
-		?>
-    
-
-
-		<?php
-	}
-	?>
-
-</div>
-
-
-
-
-
 <section id="home">
     <div class="home-content" data-aos="fade-up">
         <h2>Un pique-nique c'est sympathique</h2>

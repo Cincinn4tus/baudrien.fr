@@ -6,27 +6,13 @@ require "functions.php";
 
 //Est-ce que je recois ce que j'ai demandé
 
-if(
-	empty($_POST["email"]) ||
-	!isset($_POST["firstname"]) ||
-	!isset($_POST["lastname"]) || 
-	empty($_POST["pseudo"]) ||
-	empty($_POST["password"]) ||
-	empty($_POST["passwordConfirm"]) ||
-	empty($_POST["country"]) ||
-	empty($_POST["cgu"]) ||
-	!isset($_POST["birthday"])||
-	count($_POST)!=9
-){
 
-	die("Tentative de Hack ...");
-
-}
 
 
 
 
 //récupérer les données du formulaire
+$role = $_POST["user_role"];
 $email = $_POST["email"];
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
@@ -50,6 +36,18 @@ $pseudo = ucwords(strtolower(trim($pseudo)));
 //vérifier les données
 $errors = [];
 
+
+
+
+// ROLE
+
+
+if($role !=1 && $role !=2){
+    $errors[] = "Choisir le type de compte";
+}
+
+
+
 //Email OK
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 	$errors[] = "Email incorrect";
@@ -57,7 +55,7 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 
 	//Vérification l'unicité de l'email
 	$pdo = connectDB();
-	$queryPrepared = $pdo->prepare("SELECT id from iw_user WHERE email=:email");
+	$queryPrepared = $pdo->prepare("SELECT id from baudrien_user WHERE email=:email");
 
 	$queryPrepared->execute(["email"=>$email]);
 	
@@ -126,14 +124,15 @@ if(count($errors) == 0){
 	//$email = "y.skrzypczy@gmail.com";
 	//$firstname = "');DELETE FROM users;";
 
-	$queryPrepared = $pdo->prepare("INSERT INTO iw_user (email, firstname, lastname, pseudo, country, birthday, pwd) 
-		VALUES ( :email , :firstname, :lastname, :pseudo, :country, :birthday, :pwd );");
+	$queryPrepared = $pdo->prepare("INSERT INTO baudrien_user (email, user_role, firstname, lastname, pseudo, country, birthday, pwd) 
+		VALUES ( :email , :user_role, :firstname, :lastname, :pseudo, :country, :birthday, :pwd );");
 
 
 	$pwd = password_hash($pwd, PASSWORD_DEFAULT);
 	
 	$queryPrepared->execute([
 								"email"=>$email,
+                                "user_role"=>$role,
 								"firstname"=>$firstname,
 								"lastname"=>$lastname,
 								"pseudo"=>$pseudo,

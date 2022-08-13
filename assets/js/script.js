@@ -6,7 +6,7 @@ const navbar = document.getElementsByTagName('nav');
 let dark_theme_class = 'dark';
 
 
-toggle_btn.addEventListener('click', function(colorScheme) {
+toggle_btn.addEventListener('click', function() {
 
     if (body.classList.contains(dark_theme_class)) {
 
@@ -22,6 +22,4 @@ toggle_btn.addEventListener('click', function(colorScheme) {
 
 });
 
-sessionStorage.setItem('scheme', colorScheme);
 
-var theme_change = sessionStorage.getItem('scheme');

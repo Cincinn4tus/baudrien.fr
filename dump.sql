@@ -8,7 +8,8 @@
 -- Version de PHP :  7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET time_zone = "+02:00";
+default-time-zone='+02:00'
 
 --
 -- Base de données :  `projetweb1A1`
@@ -20,8 +21,9 @@ SET time_zone = "+00:00";
 -- Structure de la table `iw_user`
 --
 
-CREATE TABLE `iw_user` (
+CREATE TABLE `baudrien_user` (
   `id` int(11) NOT NULL,
+  `user_role`int(1) NOT NULL,
   `email` varchar(320) NOT NULL,
   `firstname` varchar(45) DEFAULT NULL,
   `lastname` varchar(100) DEFAULT NULL,
@@ -36,20 +38,20 @@ CREATE TABLE `iw_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `iw_user`
+-- Déchargement des données de la table `baudrien_user`
 --
 
-INSERT INTO `iw_user` (`id`, `email`, `firstname`, `lastname`, `pwd`, `country`, `birthday`, `pseudo`, `status`, `date_inserted`, `date_updated`, `token`) VALUES
-(9, 'y.skrzypczyk@gmail.com', 'Yves', 'SKRZYPCZYK', '$2y$10$oHnAf2HYOm8/kceE2PWQouUNNLZOaGykpddqJGZSeqrOFb93TqBKm', 'fr', '1986-11-29', 'Prof', 0, '2022-03-28 16:17:52', '2022-03-28 16:17:56', 'c6c6191be3b8868ac6ce1706a97e6afc70b19769');
+INSERT INTO `baudrien_user` (`id`, `user_role` `email`, `firstname`, `lastname`, `pwd`, `country`, `birthday`, `pseudo`, `status`, `date_inserted`, `date_updated`, `token`) VALUES
+(1, 1, 'aligoumane@protonmail.com', 'Ali', 'Goumane', '$2y$10$oHnAf2HYOm8/kceE2PWQouUNNLZOaGykpddqJGZSeqrOFb93TqBKm', 'fr', '1986-11-29', 'Prof', 0, '2022-03-28 16:17:52', '2022-03-28 16:17:56', 'c6c6191be3b8868ac6ce1706a97e6afc70b19769');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `iw_user`
+-- Index pour la table `baudrien_user`
 --
-ALTER TABLE `iw_user`
+ALTER TABLE `baudrien_user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,7 +59,7 @@ ALTER TABLE `iw_user`
 --
 
 --
--- AUTO_INCREMENT pour la table `iw_user`
+-- AUTO_INCREMENT pour la table `baudrien_user`
 --
-ALTER TABLE `iw_user`
+ALTER TABLE `baudrien_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;

@@ -10,7 +10,7 @@
 
 
 					$pdo = connectDB();
-					$queryPrepared = $pdo->prepare("SELECT * FROM iw_user WHERE email=:email");
+					$queryPrepared = $pdo->prepare("SELECT * FROM baudrien_user WHERE email=:email");
 					$queryPrepared->execute(["email"=>$_POST['email']]);
 					$results = $queryPrepared->fetch();
 
@@ -19,7 +19,9 @@
 
 						$token = createToken();
 						updateToken($results["id"], $token);
+
 						//Insertion dans la session du token
+                        
                         $_SESSION['pseudo'] = $results["pseudo"];
 						$_SESSION['email'] = $_POST['email'];
 						$_SESSION['id'] = $results["id"];

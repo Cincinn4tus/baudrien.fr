@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="fr">
   <head>
@@ -63,32 +61,23 @@
 
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
-
-                            <?php if(isConnected() && $_SESSION['id'] == 1){
-                                        ?>
-                                        <li><a class="nav-link" href="./analyses.php">Console d'administration</a></li>
-
-                                     <?php } else {
-                                        ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./index.php">Accueil</a>
-                                </li>
-
-                                <?php } ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#expertise">Louer un camping</a>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.php">Version utilisateur</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#portfolio">Proposer une location</a>
+                                    <a class="nav-link" href="./analyses.php">Analyses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Boutique</a>
+                                    <a class="nav-link" href="./users.php">Gestion des utilisateurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Qui sommes-nous ?</a>
+                                    <a class="nav-link" href="#contact">Gestion des locations</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Contact</a>
+                                    <a class="nav-link" href="#contact">Gestion du site</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Tickets</a>
                                 </li>
                             </ul>
                         </div>
