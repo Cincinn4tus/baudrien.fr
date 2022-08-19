@@ -1,6 +1,8 @@
 const toggle_btn = document.getElementById('theme-btn');
 const body = document.getElementsByTagName('body')[0];
 const navbar = document.getElementsByTagName('nav');
+const addImg = document.getElementById('add-btn');
+const form = document.getElementById('location-form');
 
 
 let dark_theme_class = 'dark';

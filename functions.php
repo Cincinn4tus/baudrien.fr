@@ -68,11 +68,12 @@ require "config.inc.php";
 
         $email = $userInformations['email'];
         $pseudo = $userInformations["pseudo"];
-        $birthay = strtotime($userInformations['birthday']);
+        $birthay = date($userInformations['birthday']);
+        $role = $userInformations['user_role'];
+        $avatar = $userInformations['user_avatar'];
     } else {
         $pseudo = "Inconnu";
     }
-
 
 
 
@@ -157,5 +158,42 @@ function numberOfUsers() {
             echo " Utilisateurs inscrits";
         }
     }
-   
 }
+
+
+
+
+
+
+
+function resizeImageJpeg($source, $dst, $width, $height, $quality) {
+	$imageSize = getimagesize($source);
+	$imageRessource = imagecreatefromjpeg($source);
+	$imageFinal = imagecreatetruecolor($width, $height);
+	$final = imagecopyresampled($imageFinal, $imageRessource, 0, 0, 0, 0, $width, $height, $imageSize[0], $imageSize[1]);
+
+	imagejpeg($imageFinal, $dst, $quality);
+}
+
+
+function resizeImagePng($source, $dst, $width, $height, $quality) {
+	$imageSize = getimagesize($source);
+	$imageRessource = imagecreatefrompng($source);
+	$imageFinal = imagecreatetruecolor($width, $height);
+	$final = imagecopyresampled($imageFinal, $imageRessource, 0, 0, 0, 0, $width, $height, $imageSize[0], $imageSize[1]);
+
+	imagepng($imageFinal, $dst, $quality);
+}
+
+function resizeImageGif($source, $dst, $width, $height, $quality) {
+	$imageSize = getimagesize($source);
+	$imageRessource = imagecreatefromgif($source);
+	$imageFinal = imagecreatetruecolor($width, $height);
+	$final = imagecopyresampled($imageFinal, $imageRessource, 0, 0, 0, 0, $width, $height, $imageSize[0], $imageSize[1]);
+
+	imagegif($imageFinal, $dst, $quality);
+}
+
+
+
+

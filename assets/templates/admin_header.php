@@ -16,12 +16,12 @@
   <header>
         <div class="container-fluid">
             <div class="row">
-                <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
                         <button class="btn btn-starter" id="theme-btn"><i class="bi bi-brightness-high-fill"></i></button>
 
 
                         <a class="navbar-brand text-uppercase fw-bold" href="./index.php">
-                            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Baudrien</span>
+                            <img src="./assets/img/logo.png" alt="main-logo" class="main-logo">
                         </a>
 
 

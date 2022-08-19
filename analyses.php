@@ -52,7 +52,7 @@
           <div class="icon-box col-lg-12">
             <div class="icon"><i class="bi bi-percent"></i></div>
             <h4><a href="">Comptabilité</a></h4>
-            <p>Devis, facture,…</p>
+            <p>Devis, facture,gestion comptable</p>
           </div>
         </div>
 

@@ -28,8 +28,6 @@
 		$queryPrepared->execute();
 		$results = $queryPrepared->fetchAll();
 
-        echo sizeof($results);
-
 		?>
 
 

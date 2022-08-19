@@ -16,14 +16,14 @@
 
 
   <header>
-        <div class="container-fluid">
+        <div class="container-fluid" id="main-navbar">
             <div class="row">
-                <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
+                <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
                         <button class="btn btn-starter" id="theme-btn"><i class="bi bi-brightness-high-fill"></i></button>
 
 
                         <a class="navbar-brand text-uppercase fw-bold" href="./index.php">
-                            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Baudrien</span>
+                            <img src="./assets/img/logo.png" alt="main-logo" class="main-logo">
                         </a>
 
 
@@ -34,7 +34,7 @@
 
 
                                 <div id="user-menu">
-                                    <img id="avatar-img" src="./assets/img/avatar.jpeg" alt="avatar" data-bs-toggle="dropdown">
+                                    <img id="avatar-img" src="<?php echo $avatar; ?>" alt="avatar" data-bs-toggle="dropdown">
                                     <ul class="dropdown-menu">
                                         <h4> <?php echo $pseudo ?> </h4>
                                         <li><a class="dropdown-item" href="./completeProfile.php"><i class="bi bi-info-circle"></i>  Mes informations</a></li>
@@ -63,8 +63,7 @@
 
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
-
-                            <?php if(isConnected() && $_SESSION['id'] == 1){
+                                    <?php if(isConnected() && $_SESSION['id'] == 1){
                                         ?>
                                         <li><a class="nav-link" href="./analyses.php">Console d'administration</a></li>
 
@@ -76,10 +75,14 @@
 
                                 <?php } ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#expertise">Louer un camping</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#portfolio">Proposer une location</a>
+
+                                <?php if(isConnected() && $role == 2 || isConnected() && $role==1 || !isConnected()) {
+                                    ?>
+                                    <a class="nav-link" href="./catalog.php">Louer un camping</a>
+
+                                    <?php } else { ?>
+                                    <a class="nav-link" href="newLocation.php">Proposer une location</a>
+                                        <?php } ?>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Boutique</a>
