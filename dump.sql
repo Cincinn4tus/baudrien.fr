@@ -65,6 +65,7 @@ CREATE TABLE `baudrien_user` (
   `token` char(40) DEFAULT NULL
 ) ENGINE=MariaDB DEFAULT CHARSET=utf8;
 
+
 --
 -- Déchargement des données de la table `baudrien_user`
 --
