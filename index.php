@@ -26,7 +26,7 @@
 
 
     <section id="circuits">
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
         <div class="section-header">
           <h2>Campings thématiques</h2>
           <p>Un voyage sur-mesure, au coeur de la nature</p>
@@ -47,6 +47,23 @@
               <p class="description">Avec un expert, allez à la rencontre de ce que la nature vous offre</p>
             </div>
           </div>
+
+          <section id="newsletter">
+      <div class="container" data-aos="zoom-out">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2 class="cta-title">Newsletter</h2>
+            <p class="cta-text">Envie de découvrir, de renouer avec la nature ? ne ratez pas les prochaines promotions
+              et restez informé sur toutes nos offres !
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Je m'inscris !</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
           <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="300" id="kenya">
             <div class="box">

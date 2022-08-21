@@ -17,7 +17,18 @@
     }
 ?>
 
-<div class="container">
+
+
+
+
+<div class="container"><br>
+
+    <div id="searchbar" class="col-lg-2">
+        <input type="search" class="form-control" placeholder="Recherche">
+    </div>
+
+
+
 	<h3>Liste des utilisateurs</h3>
 
 	<?php 
@@ -27,7 +38,6 @@
 		$queryPrepared = $pdo->prepare("SELECT * FROM baudrien_user");
 		$queryPrepared->execute();
 		$results = $queryPrepared->fetchAll();
-
 		?>
 
 

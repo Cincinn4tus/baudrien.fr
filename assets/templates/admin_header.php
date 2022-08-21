@@ -32,7 +32,7 @@
 
 
                                 <div id="user-menu">
-                                    <img id="avatar-img" src="./assets/img/avatar.jpeg" alt="avatar" data-bs-toggle="dropdown">
+                                    <img id="avatar-img" src="<?php echo $userInformations["user_avatar"]; ?>" alt="avatar" data-bs-toggle="dropdown">
                                     <ul class="dropdown-menu">
                                         <h4> <?php echo $pseudo ?> </h4>
                                         <li><a class="dropdown-item" href="./completeProfile.php"><i class="bi bi-info-circle"></i>  Mes informations</a></li>

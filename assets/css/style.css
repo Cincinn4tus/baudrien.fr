@@ -11,7 +11,50 @@ body{
   padding-top: 75px;
 }
 
+#location-div{
+  text-align: center;
+}
 
+
+#newsletter {
+  background-color: #081e5b;
+  background-size: cover;
+  padding: 40px 0;
+}
+#newsletter .cta-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+#newsletter .cta-text {
+  font-size: 1.3em;
+  color: #fff;
+}
+@media (min-width: 769px) {
+.cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+#newsletter .cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+#newsletter .cta-btn:hover {
+  background: orangered;
+  border: 3px solid orangered;
+}
 
 .navbar-toggler{
     border: none;
@@ -48,16 +91,16 @@ body{
 }
 
 .dark{
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     color: white;
 }
 
 .dark  #circuits  .box{
-    background: black;
+    background: rgb(30, 30, 30);
 }
 
 #theme-btn{
-    color: black;
+    color: rgb(30, 30, 30)  ;
     border: none;
 }
 
@@ -445,3 +488,18 @@ footer{
   margin-left: auto;
   margin-right: auto;
 }
+
+#location-page-img{
+  width: 100%;
+  height: 50vh;
+}
+
+input{
+  border: gray 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  width: auto;
+}
+

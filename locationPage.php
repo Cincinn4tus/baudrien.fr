@@ -22,6 +22,9 @@ $menage = $location["location_service_menage"];
 $food = $location["location_service_food"];
 $type = $location["location_type"];
 
+$_SESSION['locationId'] = $location["location_id"];
+$_SESSION["location_user"] = $location["location_user"];
+
 
 $mainTitle = $location["location_title"];
 
@@ -33,7 +36,7 @@ include("./assets/templates/header.php")
     <div class="container">
 
     <h2 class="location-title"> <?php echo $title; ?> </h2>
-    <img src="<?php echo $location["location_image"]; ?> " alt="">
+    <img id="location-page-img" src="<?php echo $location["location_image"]; ?> " alt="">
 
     <h3> Description </h3>
 
@@ -41,6 +44,12 @@ include("./assets/templates/header.php")
     <p>
         <?php echo $description; ?>
     </p>
+
+
+
+    <!-----------------------------------
+    LOCATION SERVICES
+    ------------------------------------>
 
 
       <div class="row">
@@ -107,7 +116,7 @@ include("./assets/templates/header.php")
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section>
 
 
   <section>
@@ -116,14 +125,28 @@ include("./assets/templates/header.php")
     </div>
   </section>
 
+
+  <form action="./rentLocation.php" method="POST">
+
   <section id="rent-btn">
     <div> 
       <a href="rentLocation.php">
-        <button class="btn btn-info">
+        <button class="btn btn-danger">
           Réserver un séjour
         </button>
       </a>
     </div>
+  </section>
+  </form>
+
+
+  <section>
+    <h3>Besoin de renseignements ?</h3>
+    <a href="./newConversation.php">
+      <button class="btn btn-info">
+        Contacter le vendeur
+      </button>
+    </a>
   </section>
 
 

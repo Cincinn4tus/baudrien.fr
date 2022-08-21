@@ -49,11 +49,15 @@
                         ?>
 
                         <div class="location-item d-flex justify-content-center">
-                            <h3 class="location-title"> <?php echo $location['location_title']; ?></h3>
-                            <img class="location-img" src="<?php echo $location["location_image"];?>">
-                            <a href="<?php echo $location['location_link'];?>">
-                                <button class="btn btn-info">Ouvrir</button>
-                            </a>
+                            <div id="location-div">
+                                <h3 class="location-title"> <?php echo $location['location_title']; ?></h3>
+                                <a href="<?php echo $location['location_link'];?>">
+                                    <button class="btn btn-info">Ouvrir</button>
+                                </a>
+                            </div>
+                            <div>
+                                <img class="location-img" src="<?php echo $location["location_image"];?>">
+                            </div>
                         </div>
         <?php 
             }

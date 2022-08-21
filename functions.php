@@ -68,7 +68,7 @@ require "config.inc.php";
 
         $email = $userInformations['email'];
         $pseudo = $userInformations["pseudo"];
-        $birthay = date($userInformations['birthday']);
+        $birthay = $userInformations['birthday'];
         $role = $userInformations['user_role'];
         $avatar = $userInformations['user_avatar'];
     } else {

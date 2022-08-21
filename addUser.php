@@ -4,13 +4,6 @@ require "functions.php";
 
 
 
-//Est-ce que je recois ce que j'ai demandé
-
-
-
-
-
-
 //récupérer les données du formulaire
 $role = $_POST["user_role"];
 $email = $_POST["email"];
@@ -121,8 +114,7 @@ if(count($errors) == 0){
 
 	
 
-	//$email = "y.skrzypczy@gmail.com";
-	//$firstname = "');DELETE FROM users;";
+
 
 	$queryPrepared = $pdo->prepare("INSERT INTO baudrien_user (email, user_role, firstname, lastname, pseudo, country, birthday, pwd) 
 		VALUES ( :email , :user_role, :firstname, :lastname, :pseudo, :country, :birthday, :pwd );");
