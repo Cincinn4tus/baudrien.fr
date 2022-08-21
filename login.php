@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require "functions.php";
+	require "./functions.php";
 ?>
 			<?php
 
@@ -31,7 +31,7 @@
                         if($_SESSION['id'] == 1) {
 
 
-						header("location: ./admin.php");
+						header("Location: ./admin.php");
 
                         } else {
                             header("Location: ./index.php");

@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require "functions.php";
+    require "./functions.php";
     $mainTitle = "Accueil";
     include("./assets/templates/header.php");
     ?>
