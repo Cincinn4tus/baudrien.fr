@@ -133,7 +133,7 @@ if(count($errors) == 0){
 								"pwd"=>$pwd,
 							]);
 
-	header("Location: ./index.php");	
+	header("Location: index.php");	
 
 }else{
 	
