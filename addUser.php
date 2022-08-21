@@ -2,6 +2,8 @@
 session_start();
 require "functions.php";
 
+include("./assets/templates/header.php");
+
 
 
 //récupérer les données du formulaire
