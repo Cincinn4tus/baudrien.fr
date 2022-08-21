@@ -1,4 +1,4 @@
-CREATE TABLE `baudrien_user` (
+CREATE TABLE `baudrien_user`
   `id` int(11) NOT NULL,
   `user_avatar` varchar(320) DEFAULT ('./assets/img/default_avatar.png'),
   `user_role`int(1) NOT NULL,
@@ -12,5 +12,4 @@ CREATE TABLE `baudrien_user` (
   `status` tinyint(4) NOT NULL DEFAULT '0',
   `date_inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_updated` timestamp DEFAULT now() ON UPDATE CURRENT_TIMESTAMP,
-  `token` char(40) DEFAULT NULL
-) ENGINE=MariaDB DEFAULT CHARSET=utf8;
+  `token` char(40) DEFAULT NULL;
