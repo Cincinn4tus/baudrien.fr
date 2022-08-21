@@ -31,10 +31,10 @@
                         if($_SESSION['id'] == 1) {
 
 
-						header("location: admin.php");
+						header("location: ./admin.php");
 
                         } else {
-                            header("Location: index.php");
+                            header("Location: ./index.php");
                         }
 
 					}else{
