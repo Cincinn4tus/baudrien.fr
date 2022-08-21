@@ -25,7 +25,7 @@
 				<select name="user_role" class="form-control">
 					<option value="1">Je cherche un camping</option>
 					<option value="2">Je loue un camping</option>
-				</select>
+				</select><br>
 
 
 				<input type="email" class="form-control" name="email" placeholder="Votre email" required="required"><br>

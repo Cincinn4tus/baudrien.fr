@@ -22,7 +22,7 @@ default-time-zone='+02:00'
 --
 
 CREATE TABLE `baudrien_user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT (1),
   `user_avatar` varchar(320) DEFAULT ('./assets/img/default_avatar.png'),
   `user_role`int(1) NOT NULL,
   `email` varchar(320) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `baudrien_user` (
   `date_inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_updated` timestamp DEFAULT now() ON UPDATE CURRENT_TIMESTAMP,
   `token` char(40) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MariaDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `baudrien_user`
