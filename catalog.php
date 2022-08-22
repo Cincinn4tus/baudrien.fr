@@ -7,31 +7,14 @@
 
 
 
+<a href="./delLocations.php">
+    <button class="btn btn-danger">
+        Tout supprimer
+    </button>
+</a>
 
 
-
-<div class="container">
-
-    <nav class="row">
-
-    <div id="search-navbar">
-            <a href="./delLocations.php">
-                <button class="btn btn-danger">
-                    Tout supprimer
-                </button>
-            </a>
-
-
-            <h3>Liste des locations</h3><br>
-
-            <div>
-                <i class="bi bi-sliders"></i> Filtres
-            </div>
-
-
-
-    </div>
-
+<div class="container"><br>
 
 
 
@@ -42,6 +25,7 @@
         $queryPrepared->execute();
         $results = $queryPrepared->fetchAll();
         $location = $results;
+        
 
 
         

@@ -6,6 +6,7 @@ require "functions.php";
 $link = ".".$_SERVER['PHP_SELF'];
 
 
+
 $pdo = connectDB();
 $queryPrepared = $pdo->prepare("SELECT * FROM baudrien_location WHERE location_link='$link'");	
 $queryPrepared->execute();

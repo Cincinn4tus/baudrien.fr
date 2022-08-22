@@ -6,6 +6,7 @@ require "functions.php";
 
 
 //récupérer les données du formulaire
+$avatar = "./assets/img/avatar-img";
 $role = $_POST["user_role"];
 $email = $_POST["email"];
 $firstname = $_POST["firstname"];
@@ -117,29 +118,30 @@ if(count($errors) == 0){
 
 
 
-	$queryPrepared = $pdo->prepare("INSERT INTO baudrien_user (email, user_role, firstname, lastname, pseudo, country, birthday, pwd) 
-		VALUES ( :email , :user_role, :firstname, :lastname, :pseudo, :country, :birthday, :pwd );");
+	$queryPrepared = $pdo->prepare("INSERT INTO baudrien_user (email,user_avatar, user_role, firstname, lastname, pseudo, country, birthday, pwd) 
+		VALUES ( :email ,:user_avatar, :user_role, :firstname, :lastname, :pseudo, :country, :birthday, :pwd );");
 
 
 	$pwd = password_hash($pwd, PASSWORD_DEFAULT);
 	
 	$queryPrepared->execute([
 								"email"=>$email,
+								"user_avatar"=> $avatar,
                                 "user_role"=>$role,
 								"firstname"=>$firstname,
 								"lastname"=>$lastname,
 								"pseudo"=>$pseudo,
 								"country"=>$country,
 								"birthday"=>$birthday,
-								"pwd"=>$pwd,
+								"pwd"=>$pwd
 							]);
 
-	header("Location: index.php");	
+	header("Location: ./index.php");	
 
 }else{
-	
+
 	$_SESSION['errors'] = $errors;
-	header("Location: register.php");
+	header("Location: ./register.php");
 }
 
 

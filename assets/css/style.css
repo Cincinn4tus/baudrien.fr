@@ -503,3 +503,6 @@ input{
   width: auto;
 }
 
+.dark table{
+  color: white;
+}

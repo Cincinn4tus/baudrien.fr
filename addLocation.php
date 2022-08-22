@@ -8,7 +8,7 @@
     $price = $_POST["euros"];
     $errors = [];
     $locationTitle = $_POST['location_title'];
-    $locationLink = trim("./" . $locationTitle .".php");
+    $locationLink = strtolower(trim("./" . $locationTitle .".php"));
     $locationType = $_POST["location_type"];
 
     $locationContent = "<?php include('./locationPage.php'); ?>";
@@ -159,12 +159,13 @@ if(isset($_POST["children"])){
                                     "children_price"=>$childrenPrice
                                     ]);
 
-        header("Location: ./index.php");
+    
     }
 
 
     $locationPage = fopen($locationLink, "x+");
     fputs($locationPage,$locationContent);
     fclose($locationPage);
+    header("Location: ./index.php");
 
 ?>

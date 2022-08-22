@@ -28,7 +28,7 @@
 				?>
 
 
-				<h3>Modifier mon profil <?php echo $birthay; ?></h3>
+				<h3>Modifier mon profil</h3>
 
 				<form method="POST" action="./modifyUser.php" required="required" enctype="multipart/form-data">
 

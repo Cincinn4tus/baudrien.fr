@@ -51,3 +51,48 @@ function getCookie(cname) {
     return "";
 }
 
+
+
+
+
+/* BARRE RECHERCHE */
+
+function getdata() {
+    let pseudo = document.getElementById("pseudo");
+    let arrayBtn = document.getElementById("all-users");
+
+
+    if(pseudo){
+        
+        if (pseudo.value) {
+            let req = new XMLHttpRequest();
+        
+            req.addEventListener('loadend', (e) => {
+                
+                resultDiv = document.getElementById('results');
+ 
+                if (!resultDiv) {
+                    //todo auto create
+                }
+                resultDiv.innerHTML = e.target.response;
+
+            });
+
+            req.open("GET", './getdata.php?pseudo=' + pseudo.value);
+
+            req.send();
+
+            
+        } else {
+            
+        }
+
+        
+    } else {
+        console.error("ERROR: missing input pseudo");
+    }
+}
+
+if(pseudo.value === null){
+    resultDiv.innerHTML = "Hello";
+}

@@ -39,7 +39,7 @@ $pdo = connectDB();
 
 $queryPrepared->execute(["user_avatar"=>$picture]);
 
-
+header ("Location:./index.php");
 
 
 ?>

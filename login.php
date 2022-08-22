@@ -29,14 +29,9 @@
 						$_SESSION['token'] = $token;
 
 
-                        if($_SESSION['id'] == 1) {
 
+						header("Location: ./index.php");
 
-						header("Location: ./admin.php");
-
-                        } else {
-                            header("Location: ./index.php");
-                        }
 
 					}else{
 						echo "Identifiants incorrects";
