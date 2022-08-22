@@ -75,12 +75,12 @@
                                 <?php } ?>
                                 <li class="nav-item">
 
-                                <?php if(isConnected() && $role == 2 || isConnected() && $role==1 || !isConnected()) {
+                                <?php if(isConnected() && $role == 2 || !isConnected()) {
                                     ?>
-                                    <a class="nav-link" href="./catalog.php">Louer un camping</a>
+                                    <a class="nav-link" href="newLocation.php">Proposer une location</a>
 
                                     <?php } else { ?>
-                                    <a class="nav-link" href="newLocation.php">Proposer une location</a>
+                                    <a class="nav-link" href="./catalog.php">Louer un camping</a>
                                         <?php } ?>
                                 </li>
                                 <li class="nav-item">

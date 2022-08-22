@@ -2,7 +2,6 @@
 session_start();
 require "functions.php";
 
-include("./assets/templates/header.php");
 
 
 
