@@ -6,7 +6,7 @@ require "functions.php";
 
 
 //récupérer les données du formulaire
-$avatar = "./assets/img/avatar-img";
+$avatar = $_SERVER['DOCUMENT_ROOT'] ."/assets/img/default_avatar.png";
 $role = $_POST["user_role"];
 $email = $_POST["email"];
 $firstname = $_POST["firstname"];
@@ -136,12 +136,12 @@ if(count($errors) == 0){
 								"pwd"=>$pwd
 							]);
 
-	header("Location: ./index.php");	
+	header("Location: /index.php");	
 
 }else{
 
 	$_SESSION['errors'] = $errors;
-	header("Location: ./register.php");
+	header("Location: /register.php");
 }
 
 

@@ -66,33 +66,16 @@ function getdata() {
         
         if (pseudo.value) {
             let req = new XMLHttpRequest();
-        
-            req.addEventListener('loadend', (e) => {
-                
+            req.addEventListener('loadend', (e) => {    
                 resultDiv = document.getElementById('results');
- 
-                if (!resultDiv) {
-                    //todo auto create
-                }
                 resultDiv.innerHTML = e.target.response;
-
             });
-
-            req.open("GET", './getdata.php?pseudo=' + pseudo.value);
-
-            req.send();
-
-            
-        } else {
-            
-        }
-
+            req.open("GET", '/getdata.php?pseudo=' + pseudo.value);
+            req.send(); 
+        } 
         
-    } else {
-        console.error("ERROR: missing input pseudo");
-    }
+        } else {
+            console.error("ERROR: missing input pseudo");
+        }
 }
 
-if(pseudo.value === null){
-    resultDiv.innerHTML = "Hello";
-}

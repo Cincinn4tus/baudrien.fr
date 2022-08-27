@@ -10,10 +10,10 @@
 
 <?php
     if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
-        include("./assets/templates/header.php");
-        include("./assets/templates/403.php");
+        include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/header.php");
+        include("/assets/templates/403.php");
     } else{
-        include("./assets/templates/admin_header.php");
+        include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/admin_header.php");
 
 ?>
 
@@ -33,5 +33,5 @@
 
 
 <?php
-    include("./assets/templates/footer.php");
+    include("/assets/templates/footer.php");
     ?>

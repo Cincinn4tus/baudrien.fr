@@ -9,7 +9,7 @@ require "functions.php";
     $queryPrepared->execute();
 
 
-    header("Location: ./catalog.php");
+    header("Location: /catalog.php");
 
 
 ?>

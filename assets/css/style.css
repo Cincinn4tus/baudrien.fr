@@ -236,7 +236,7 @@ body{
   
 
   #sport{
-    background: url(../img/sport.jpg);
+    background: url(/assets/img/sport.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -505,4 +505,33 @@ input{
 
 .dark table{
   color: white;
+}
+
+h1{
+  text-align: center;
+}
+
+.error-div{
+  list-style: none;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: red;
+}
+
+.error-title{
+  color: red;
+}
+
+.final-price td{
+  font-weight: bold;
+  color: brown;
+}
+
+.button{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 20px;
 }

@@ -2,12 +2,12 @@
 	session_start();
 	require "functions.php";
     $mainTitle = "Destinations";
-    include("./assets/templates/header.php");
+    include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     ?>
 
 
 
-<a href="./delLocations.php">
+<a href="/delLocations.php">
     <button class="btn btn-danger">
         Tout supprimer
     </button>
@@ -24,7 +24,7 @@
         $queryPrepared = $pdo->prepare("SELECT * FROM baudrien_location");
         $queryPrepared->execute();
         $results = $queryPrepared->fetchAll();
-        $location = $results;
+        $location = $results; 
         
 
 
@@ -54,5 +54,5 @@
 
 
 <?php
-    include("./assets/templates/footer.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
     ?>

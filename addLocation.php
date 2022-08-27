@@ -8,10 +8,10 @@
     $price = $_POST["euros"];
     $errors = [];
     $locationTitle = $_POST['location_title'];
-    $locationLink = strtolower(trim("./" . $locationTitle .".php"));
+    $locationLink = "location/" . urlencode($locationTitle);
     $locationType = $_POST["location_type"];
 
-    $locationContent = "<?php include('./locationPage.php'); ?>";
+
 
 
 /***************************************************************************** 
@@ -21,6 +21,9 @@
 if(isset($_POST["wifi"])){
     $wifi = $_POST["wifi"];
     $wifiPrice = $_POST["wifi_price"];
+    if(empty($wifiPrice)){
+        $wifiPrice = 0;
+    }
 } else {
     $wifi = "2";
 }
@@ -28,6 +31,9 @@ if(isset($_POST["wifi"])){
 if(isset($_POST["menage"])){
     $menage = $_POST["menage"];
     $menagePrice = $_POST["menage_price"];
+    if(empty($menagePrice)){
+        $menagePrice = 0;
+    }
 } else {
     $menage = "2";
 }
@@ -35,6 +41,9 @@ if(isset($_POST["menage"])){
 if(isset($_POST["food"])){
     $food = $_POST["food"];
     $foodPrice = $_POST["food_price"];
+    if(empty($foodPrice)){
+        $foodPrice = 0;
+    }
 } else {
     $food = "2";
 }
@@ -42,6 +51,9 @@ if(isset($_POST["food"])){
 if(isset($_POST["material"])){
     $material = $_POST["material"];
     $materialPrice = $_POST["material_price"];
+    if(empty($materialPrice)){
+        $materialPrice = 0;
+    }
 } else {
     $material = "2";
 }
@@ -49,6 +61,9 @@ if(isset($_POST["material"])){
 if(isset($_POST["children"])){
     $children = $_POST["children"];
     $childrenPrice = $_POST["children_price"];
+    if(empty($childrenPrice)){
+        $childrenPrice = 0;
+    }
 } else {
     $children = "2";
 }
@@ -57,7 +72,7 @@ if(isset($_POST["children"])){
 
 /* VERIFICATION DE L'IMAGE */
 
-    $uploaddir = './assets/img/locations/';
+    $uploaddir = '/assets/img/locations/';
     $uploadfile = strtolower($uploaddir .basename($_FILES['picture']['name']));
     $picture = $uploadfile;
     move_uploaded_file($_FILES['picture']['tmp_name'], $picture);
@@ -75,7 +90,7 @@ if(isset($_POST["children"])){
         resizeImageJpeg($uploadfile, $picture, 600, 200, 9);
     } else{
         die("L'extension de l'image n'a pas été reconnue. Insérer uniquement des fichiers PNG, GIF ou JPEG");
-        header("Location: ./index.php");
+        header("Location: /index.php");
     }
 
 */
@@ -94,7 +109,7 @@ if(isset($_POST["children"])){
         empty($_POST["location_type"])||
         ($_POST["euros"] < 1)
     ){
-        header("Location: ./newLocation.php");
+        header("Location: /newLocation.php");
         $errors[] = "Merci de remplir tous les champs";
     } else {
 
@@ -162,10 +177,6 @@ if(isset($_POST["children"])){
     
     }
 
+    header ("Location: ./index.php");
 
-    $locationPage = fopen($locationLink, "x+");
-    fputs($locationPage,$locationContent);
-    fclose($locationPage);
-    header("Location: ./index.php");
-
-?>
+    ?>

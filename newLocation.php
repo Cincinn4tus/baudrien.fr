@@ -5,9 +5,9 @@
     $mainTitle = "Créer une offre de location";
 
     if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
-        include("./assets/templates/header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     } else{
-        include("./assets/templates/admin_header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
     }
 
 
@@ -16,7 +16,7 @@
 
     <div class="container">
     <h3> Mettre en ligne un offre de location </h3>
-        <form method="POST" action="./addLocation.php" enctype="multipart/form-data">
+        <form method="POST" action="/addLocation.php" enctype="multipart/form-data">
         
             <div class="container">
                 <div class="row mt-4">
@@ -52,5 +52,5 @@
     </div>
 
 <?php
-    include("./assets/templates/footer.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
     ?>

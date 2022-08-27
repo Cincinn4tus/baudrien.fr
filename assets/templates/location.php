@@ -1,6 +1,6 @@
 <?php
 
-    include("./assets/templates/header.php");
+    include("/assets/templates/header.php");
 
 
     $pdo = connectDB();
@@ -12,10 +12,10 @@
     echo $locationTitle;
 
     $mainTitle = $locationTitle;
-    include("./assets/templates/header.php");
+    include("/assets/templates/header.php");
     ?>
 
 
 <?php
-    include("./assets/templates/footer.php");
+    include("/assets/templates/footer.php");
     ?>

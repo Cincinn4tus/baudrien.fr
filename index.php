@@ -3,7 +3,7 @@
     session_start();
     require "./functions.php";
     $mainTitle = "Accueil";
-    include("./assets/templates/header.php");
+    include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     ?>
 
 
@@ -15,7 +15,7 @@
         <h2>Un pique-nique c'est sympathique</h2>
         <p>Avec Baudrien, c'est unique</p>
         <div>
-            <a href="./catalog.php" class="btn-get-started scrollto">Découvrir</a>
+            <a href="/catalog.php" class="btn-get-started scrollto">Découvrir</a>
         </div>
     </div>
 </section>
@@ -93,5 +93,5 @@
 
 
 <?php
-    include("./assets/templates/footer.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
     ?>

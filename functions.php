@@ -1,6 +1,8 @@
 <?php
 require "config.inc.php";
 
+error_reporting(E_ALL);
+
 
     function connectDB(){
         //création d'une nouvelle connexion à notre bdd
@@ -108,7 +110,7 @@ require "config.inc.php";
 
 
 
-    $files = fopen("./log.txt", "a");
+    $files = fopen($_SERVER['DOCUMENT_ROOT'] ."/log.txt", "a");
     fputs($files,$log);
     fclose($files);
 
@@ -122,13 +124,13 @@ require "config.inc.php";
 
     function numberOfVisits() {
 
-        $filePath = "./log.txt";
+        $filePath = $_SERVER['DOCUMENT_ROOT'] . "/log.txt";
         $logCount = count(file($filePath));
 
 
         echo $logCount;
                         if($logCount <= 1){
-                            echo (" Action enregistrée");
+                            echo ("Action enregistrée");
                         } else {
                             echo " Actions enregistrées";
                         }
@@ -166,6 +168,7 @@ function numberOfUsers() {
 
 
 
+/*
 function resizeImageJpeg($source, $dst, $width, $height, $quality) {
 	$imageSize = getimagesize($source);
 	$imageRessource = imagecreatefromjpeg($source);
@@ -193,7 +196,7 @@ function resizeImageGif($source, $dst, $width, $height, $quality) {
 
 	imagegif($imageFinal, $dst, $quality);
 }
-
+*/
 
 
 

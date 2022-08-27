@@ -21,7 +21,7 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 
 }
 
-$uploaddir = './assets/img/users/';
+$uploaddir = '/assets/img/users/';
 $uploadfile = trim(strtolower($uploaddir .basename($_FILES['user_avatar']['name'])));
 $picture = $uploadfile;
 move_uploaded_file($_FILES['user_avatar']['tmp_name'], $picture);
@@ -39,7 +39,7 @@ $pdo = connectDB();
 
 $queryPrepared->execute(["user_avatar"=>$picture]);
 
-header ("Location:./index.php");
+header ("Location:/index.php");
 
 
 ?>

@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	require "./functions.php";
+	require "/functions.php";
 	$mainTitle = "Inscription";
-	include "./assets/templates/header.php";
+	include "/assets/templates/header.php";
 	?>
 
 
@@ -19,7 +19,7 @@
 
 
 			<h3>Inscription</h3>
-			<form method="POST" action="./addUser.php" required="required">
+			<form method="POST" action="/addUser.php" required="required">
 
 
 				<select name="user_role" class="form-control">
@@ -54,4 +54,4 @@
 	</div>
 </div>
 
-<?php include "./assets/templates/footer.php";?>
+<?php include "/assets/templates/footer.php";?>

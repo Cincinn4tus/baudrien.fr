@@ -5,9 +5,9 @@
     $mainTitle = "Profil";
 
     if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
-        include("./assets/templates/header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     } else{
-        include("./assets/templates/admin_header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
 	}
     ?>
 
@@ -30,7 +30,7 @@
 
 				<h3>Modifier mon profil</h3>
 
-				<form method="POST" action="./modifyUser.php" required="required" enctype="multipart/form-data">
+				<form method="POST" action="/modifyUser.php" required="required" enctype="multipart/form-data">
 
 				Changer la photo de profil<input type="file" class="form-control" id="picture" name="user_avatar"><br>
 
@@ -71,6 +71,6 @@
 </div>
 
 <?php
-        include("./assets/templates/footer.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
     ?>
 

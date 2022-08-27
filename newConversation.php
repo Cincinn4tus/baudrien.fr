@@ -13,7 +13,7 @@
 
     $mainTitle = "Nouvelle conversation avec " . $user["pseudo"];
 
-    include("./assets/templates/header.php");
+    include("/assets/templates/header.php");
 ?>
 
 <div class="container">
@@ -24,5 +24,5 @@
 
 
 <?php
-    include("./assets/templates/footer.php");
+    include("/assets/templates/footer.php");
     ?>

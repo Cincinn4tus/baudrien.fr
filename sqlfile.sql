@@ -24,8 +24,8 @@ CREATE TABLE baudrien.baudrien_user (
  );
 
 
-      CURRENT_TIMESTAMP (date_inserted),
-     CURRENT_TIMESTAMP (date_updated),
+    CURRENT_TIMESTAMP (date_inserted),
+    CURRENT_TIMESTAMP (date_updated),
 
 
 CREATE TABLE baudrien.baudrien_location (
@@ -50,4 +50,12 @@ CREATE TABLE baudrien.baudrien_location (
     material_price FLOAT,
     PRIMARY KEY (location_id),
     FOREIGN KEY(location_user)  REFERENCES baudrien_user(id)
+);
+
+CREATE TABLE baudrien.baudrien_rent (
+    rent_price FLOAT,
+    rent_seller INT(11),
+    rent_buyer INT(11),
+    rent_date DATE,
+    rent_invoice VARCHAR(320)
 );

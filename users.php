@@ -10,10 +10,10 @@
 
 <?php
     if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
-        include("./assets/templates/header.php");
-        include("./assets/templates/403.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/403.php");
     } else{
-        include("./assets/templates/admin_header.php");
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
     }
 ?>
 
@@ -29,7 +29,7 @@
 
 
         <div id="all-users">
-            <a href="./users.php">
+            <a href="/users.php">
                 <button class="btn btn-info">
                     Tout afficher
                 </button>
@@ -42,7 +42,7 @@
 
             <?php 
                 if(!isset($_GET["pseudo"])); {
-                    include("./userArray.php");
+                    include($_SERVER['DOCUMENT_ROOT'] ."/userArray.php");
                 }
             ?>
 
@@ -55,4 +55,4 @@
 
 
 
-<?php include ("./assets/templates/footer.php");?>
+<?php include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");?>
