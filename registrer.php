@@ -24,8 +24,8 @@
 
 
 				<select name="user_role" class="form-control">
-					<option value="1">Je cherche un camping</option>
-					<option value="2">Je loue un camping</option>
+					<option value="2">Je cherche un camping</option>
+					<option value="3">Je loue un camping</option>
 				</select><br>
 
 

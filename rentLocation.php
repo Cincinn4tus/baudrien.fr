@@ -72,19 +72,16 @@
                 </div>
 
 <form method="POST" action="/verifyRent.php">
-
-
-        
         <div class="container">
             <div class="row mt-4">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <div class="rent-dates">
-                        <div>
-                            Réserver du <input type="date" name="firstday" class="form-control" required="required">
-                            Au <input type="date" name="lastday" class="form-control" required="required">
-                        </div>
-                    </div>
+                            <div class="rent-dates">
+                                <div>
+                                    Réserver du <input type="date" name="firstday" class="form-control" required="required">
+                                    Au <input type="date" name="lastday" class="form-control" required="required">
+                                </div>
+                            </div>
                             <div>
                                 <?php
 
@@ -96,10 +93,7 @@
                                     $location["location_service_children"] == 1
                                 ) {
                                     echo 'Cochez les services supplémentaires souhaités<br><br>';
-                                    $pdo = connectDB();
-                                    $queryPrepared = $pdo->prepare("SELECT * FROM baudrien_location WHERE location_id='$locationId'");
-                                    $queryPrepared->execute();
-                                    $location = $queryPrepared->fetch();  }
+                                     }
                                 if($location["location_service_wifi"] == 1){
                                     echo '<label> <input type="checkbox" name="wifi" id="wifi" value="1"> Accès au wifi (' . $wifiPrice .')</label><br>';
                                 }

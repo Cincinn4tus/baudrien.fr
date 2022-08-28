@@ -9,11 +9,11 @@
 
 
 <?php
-    if($_SESSION['id'] != 1) {
-        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
-        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/403.php");
+    if(!isConnected() || $role != 1) {
+        include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/header.php");
+        include ("./assets/errors/403.html");
     } else{
-        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
+        include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/admin_header.php");
 
 ?>
 
@@ -29,7 +29,7 @@
 
 
         <div id="all-users">
-            <a href="/users.php">
+            <a href="./users.php">
                 <button class="btn btn-info">
                     Tout afficher
                 </button>

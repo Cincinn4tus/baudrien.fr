@@ -5,7 +5,7 @@ require "functions.php";
 $link = "location/" . urlencode($_GET["name"]);
 
 
-
+$_SESSION["location_link"] = $link;
 
 $pdo = connectDB();
 $queryPrepared = $pdo->prepare("SELECT * FROM baudrien_location WHERE location_link='$link'");	
@@ -37,7 +37,8 @@ include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     <div class="container">
 
     <h2 class="location-title"> <?php echo $location["location_title"]; ?> </h2>
-    <img id="location-page-img" src="<?php echo $location["location_image"]; ?> " alt="">
+    <img id="location-page-img" src="<?php echo "/" . $location["location_image"]; ?> " alt="">
+
 
     <h3> Description </h3>
 

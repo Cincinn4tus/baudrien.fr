@@ -2,12 +2,12 @@
 	session_start();
 	require "functions.php";
     $mainTitle = "Destinations";
-    include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/header.php");
     ?>
 
 
 
-<a href="/delLocations.php">
+<a href="./delLocations.php">
     <button class="btn btn-danger">
         Tout supprimer
     </button>
@@ -31,7 +31,6 @@
         
                     foreach ($results as $location) {
                         ?>
-
                         <div class="location-item d-flex justify-content-center">
                             <div id="location-div">
                                 <h3 class="location-title"> <?php echo $location['location_title']; ?></h3>
@@ -40,7 +39,7 @@
                                 </a>
                             </div>
                             <div>
-                                <img class="location-img" src="<?php echo $location["location_image"];?>">
+                                <img class="location-img" src="<?php echo "./" . $location["location_image"];?>">
                             </div>
                         </div>
         <?php 

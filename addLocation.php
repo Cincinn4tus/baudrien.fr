@@ -65,40 +65,19 @@ if(isset($_POST["children"])){
         $childrenPrice = 0;
     }
 } else {
-    $children = "2";
+    $children = "2";    
 }
 
 
 
 /* VERIFICATION DE L'IMAGE */
 
-    $uploaddir = '/assets/img/locations/';
+    $uploaddir = 'assets/img/locations/';
     $uploadfile = strtolower($uploaddir .basename($_FILES['picture']['name']));
     $picture = $uploadfile;
     move_uploaded_file($_FILES['picture']['tmp_name'], $picture);
 
     $extension = pathinfo($uploadfile, PATHINFO_EXTENSION);
-
-
-
-/*
-    if($extension == 'png'){
-        resizeImagePng($uploadfile, $picture, 600, 200, 9);
-    } elseif($extension == 'gif'){
-        resizeImageGif($uploadfile, $picture, 600, 200, 9);
-    } elseif($extension == 'jpeg' || $extension == 'jpg') {
-        resizeImageJpeg($uploadfile, $picture, 600, 200, 9);
-    } else{
-        die("L'extension de l'image n'a pas été reconnue. Insérer uniquement des fichiers PNG, GIF ou JPEG");
-        header("Location: /index.php");
-    }
-
-*/
-
-
-
-
-    /* VERIFICATION DES AUTRES CHAMPS DU FORMULAIRE */
 
 
 

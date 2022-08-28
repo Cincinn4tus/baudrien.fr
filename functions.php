@@ -101,18 +101,13 @@ error_reporting(E_ALL);
     /* $log = $logTable["Utilisateur"] . " " . $logTable["Date"] ." " . $logTable["Heure"] . " " . $logTable["Page"] . "\n"; */
     $log = $pseudo . "\t \t" . $month . "\t" . $hour . "\t" . $url . "\n";
 
-        $logTable = [
-            "Utilisateur" => $pseudo,
-            "Date" => $month,
-            "Heure" => $hour,
-            "Page" => $url
-        ];
 
 
 
 
 
-    $files = fopen($_SERVER['DOCUMENT_ROOT'] ."/log.txt", "a");
+
+    $files = fopen($_SERVER['DOCUMENT_ROOT'] ."/log.php", "a");
     fputs($files,$log);
     fclose($files);
 

@@ -28,6 +28,7 @@
 <h3>Résumé de votre commande</h3>
 
 
+
     <div class="container">
         <div>
             <h4>Location : <?php echo $location["location_title"]; ?></h4>

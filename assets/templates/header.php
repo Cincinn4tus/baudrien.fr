@@ -1,5 +1,3 @@
-
-
 <!Doctype html>
   <head>
     <meta charset="utf-8">
@@ -8,8 +6,10 @@
 
     <meta name="description" content="Achat de matériel et location de camping">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
+
 
 
 
@@ -61,7 +61,7 @@
 
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
-                                    <?php if($_SESSION['id'] == 1){
+                                    <?php if($role == 1){
                                         ?>
                                         <li><a class="nav-link" href="/analyses.php">Console d'administration</a></li>
 
@@ -74,7 +74,7 @@
                                 <?php } ?>
                                 <li class="nav-item">
 
-                                <?php if(isConnected() && $role == 2 || !isConnected()) {
+                                <?php if(isConnected() && $role == 3 || !isConnected()) {
                                     ?>
                                     <a class="nav-link" href="newLocation.php">Proposer une location</a>
 

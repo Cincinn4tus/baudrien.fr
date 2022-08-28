@@ -4,11 +4,13 @@
     require "functions.php";
     $mainTitle = "Créer une offre de location";
 
-    if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
-        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
+
+    if(!isConnected() || isConnected() && $role != 3) {
+        include($_SERVER['DOCUMENT_ROOT'] ."/assets/error/403.html");
+
     } else{
-        include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
-    }
+    
 
 
     ?>
@@ -43,7 +45,7 @@
                             <textarea class="form-control" name="location_description" id="" placeholder="Description" rows="10"></textarea><br>
 
                             <input type="file" class="form-control" id="picture" name="picture"><br>
-                            <input type="number" class="form-control" step="0.01" name="euros">€
+                            <input type="number" class="form-control" step="0.01" name="euros" placeholder="Prix de la location (par semaine)">€
                             <input type="submit" class="btn btn-danger mb-4 mt-4 submitButton" value="Mettre en ligne">
                     </div>
                 </div>
@@ -52,5 +54,6 @@
     </div>
 
 <?php
+    }
     include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
     ?>

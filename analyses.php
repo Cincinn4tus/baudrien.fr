@@ -9,7 +9,7 @@
 
 
 <?php
-  if(!isConnected() || $_SESSION['id'] != 1) {
+  if(!isConnected() || $role != 1) {
     include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/header.php");
     include ("./assets/errors/403.html");
   } else {
@@ -31,7 +31,7 @@
                 <h3>
                     <?php numberOfVisits(); ?>
                 </h3>
-                    <P>Afficher le journal des logs</P>
+                    <P>(Logs en temps réel)</P>
           </div>
         </div>
 
@@ -73,7 +73,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box col-lg-12">
             <div class="icon"><i class="bx bx-shopping-bag"></i></div>
-            <h4><a href="">Étiquettes promos</a></h4>
+            <h4><a href="">Newsletter</a></h4>
             <p>Un module de création d'étiquettes promotionnelles offert avec votre site web</p>
           </div>
         </div>
