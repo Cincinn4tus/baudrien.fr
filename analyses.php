@@ -9,9 +9,11 @@
 
 
 <?php
-  if(isConnected() && $_SESSION['id'] = 1) {
+  if(!isConnected() || $_SESSION['id'] != 1) {
+    include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/header.php");
+    include ("./assets/errors/403.html");
+  } else {
     include($_SERVER['DOCUMENT_ROOT'] . "/assets/templates/admin_header.php");
-  }
 ?>
 
 
@@ -25,7 +27,7 @@
         <div class="col-lg-4 d-flex align-items-stretch">
           <div class="icon-box col-lg-12">
             <div class="icon"><i class="bi bi-filetype-txt"></i></div>
-            <h4><a href="">Logs</a></h4>
+            <h4><a href="./log.php">Logs</a></h4>
                 <h3>
                     <?php numberOfVisits(); ?>
                 </h3>
@@ -36,7 +38,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box col-lg-12">
             <div class="icon"><i class="bi bi-people"></i></div>
-            <h4><a href="">Utilisateurs</a></h4>
+            <h4><a href="./users.php">Utilisateurs</a></h4>
             <h3>
                 <?php numberOfUsers(); ?>
             </h3>
@@ -89,5 +91,6 @@
 
 
     <?php
+  }
         include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
         ?>

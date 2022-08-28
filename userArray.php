@@ -8,6 +8,7 @@ $pdo = connectDB();
 $queryPrepared = $pdo->prepare("SELECT * FROM baudrien_user");
 $queryPrepared->execute();
 $results = $queryPrepared->fetchAll();
+$_SESSION["id"] = "id";
 ?>
 
 <div id="user-array">
@@ -40,7 +41,7 @@ $results = $queryPrepared->fetchAll();
 
                             <div class="btn-group">
                                 <a href="delUser.php?id='.$user["id"].'" class="btn btn-danger">Supprimer</a>
-                                <a href="#" class="btn btn-warning" >Modifier</a>
+                                <a href="./admin_userModification.php" class="btn btn-warning" >Modifier</a>
                             </div>
                         </td>
                     </tr>';

@@ -6,7 +6,7 @@ require "functions.php";
 
 
 //récupérer les données du formulaire
-$avatar = $_SERVER['DOCUMENT_ROOT'] ."/assets/img/default_avatar.png";
+$avatar = "/assets/img/default_avatar.png";
 $role = $_POST["user_role"];
 $email = $_POST["email"];
 $firstname = $_POST["firstname"];

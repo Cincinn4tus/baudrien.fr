@@ -9,12 +9,12 @@
 
 
 <?php
-    if(!isConnected() || isConnected() && $_SESSION['id'] != 1) {
+    if($_SESSION['id'] != 1) {
         include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
         include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/403.php");
     } else{
         include($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/admin_header.php");
-    }
+
 ?>
 
 
@@ -55,4 +55,7 @@
 
 
 
-<?php include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");?>
+<?php 
+     }
+     include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/footer.php");
+     ?>

@@ -33,8 +33,8 @@
                             <div>
                                     Cochez les services supplémentaires souhaités<br><br>
                                     <label> <input type="checkbox" name="wifi" id="wifi" value="1"> Wifi <input type="number" step="0.01" name="wifi_price" placeholder="prix du service (total)">€</label><br>
-                                    <label> <input type="checkbox" name="menage" id="menage" value="1"> Ménage en fin de séjour <input type="number" step="0.01" name="menage_price" placeholder="prix (par semaine)">€</label><br>
-                                    <label> <input type="checkbox" name="food" id="food" value="1"> Pension alimentaire <input type="number" step="0.01" name="food_price" placeholder="prix du service (total)">€</label><br>
+                                    <label> <input type="checkbox" name="menage" id="menage" value="1"> Ménage en fin de séjour <input type="number" step="0.01" name="menage_price" placeholder="prix du service">€</label><br>
+                                    <label> <input type="checkbox" name="food" id="food" value="1"> Pension alimentaire <input type="number" step="0.01" name="food_price" placeholder="prix (par semaine)">€</label><br>
                                     <label> <input type="checkbox" name="material" id="material" value="1"> Matériel de prêt <input type="number" step="0.01" name="material_price" placeholder="prix du service (total)">€</label><br>
                                     <label> <input type="checkbox" name="children" id="children" value="1"> Aménagements pour enfants <input type="number" step="0.01" name="children_price" placeholder="prix du service (total)">€</label><br>
                                 </div>

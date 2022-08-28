@@ -22,7 +22,7 @@ error_reporting(E_ALL);
     }
 
 /***************************************************************************** 
- CONNEXION TOKEN AND SESSIONS
+ CONNEXION TOKEN ET SESSIONS
 *****************************************************************************/
 
     function createToken(){
@@ -51,6 +51,8 @@ error_reporting(E_ALL);
         $queryPrepared->execute(["email"=>$_SESSION["email"], "token"=>$_SESSION["token"]]);
 
         return $queryPrepared->fetch();
+        $userId = $_SESSION['id'];
+
         }
 
     }

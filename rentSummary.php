@@ -49,14 +49,17 @@
                                 <td>Location de l'emplacement</td>
                                 <td>
                                 <?php 
-                                        switch($location["location_type"]){
-                                        case "chalet":
-                                            echo "Chalet";
-                                        case "mobilhome":
-                                            echo "Mobil'home";
-                                        case "private_place":
-                                            echo "Emplacement privé";
-                                        }
+                                  switch($location["location_type"]){
+                                    case "chalet":
+                                      echo "Chalet";
+                                      break;
+                                    case "mobilhome":
+                                      echo "Mobil'home";
+                                      break;
+                                    case "private_place":
+                                      echo "Emplacement privé";
+                                      break;
+                                  }
                                     
   
                                 echo " - " . $_SESSION["number_of_days"] . " Jours"; ?></td>

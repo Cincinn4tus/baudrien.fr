@@ -8,7 +8,6 @@
 
     <meta name="description" content="Achat de matériel et location de camping">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
 
@@ -33,7 +32,7 @@
 
 
                                 <div id="user-menu">
-                                    <img id="avatar-img" src="<?php echo $avatar; ?>" alt="avatar" data-bs-toggle="dropdown">
+                                    <img id="avatar-img" src="<?php echo "." . $avatar; ?>" alt="avatar" data-bs-toggle="dropdown">
                                     <ul class="dropdown-menu">
                                         <h4> <?php echo $pseudo ?> </h4>
                                         <li><a class="dropdown-item" href="/completeProfile.php"><i class="bi bi-info-circle"></i>  Mes informations</a></li>
@@ -50,7 +49,7 @@
 
                         <!-- Button trigger modal -->
 
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
                             <i class="bi bi-box-arrow-in-right"> Se connecter</i>
                         </button>
                         <?php } ?>
@@ -62,7 +61,7 @@
 
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
-                                    <?php if(isConnected() && $_SESSION['id'] == 1){
+                                    <?php if($_SESSION['id'] == 1){
                                         ?>
                                         <li><a class="nav-link" href="/analyses.php">Console d'administration</a></li>
 
@@ -101,11 +100,11 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modallabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                        <h5 class="modal-title" id="modal">Connexion</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
