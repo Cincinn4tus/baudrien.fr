@@ -7423,3 +7423,6 @@ Darkron	 	[28/08/22]	[21:00:53]	localhost/users.php
 Darkron	 	[28/08/22]	[21:00:54]	localhost/users.php
 Darkron	 	[28/08/22]	[21:00:54]	localhost/users.php
 Darkron	 	[28/08/22]	[21:01:35]	localhost/userModification.php
+Darkron	 	[28/08/22]	[21:22:41]	localhost/index.php
+Darkron	 	[28/08/22]	[21:22:50]	localhost/catalog.php
+Darkron	 	[28/08/22]	[21:23:06]	localhost/catalog.php

@@ -6,12 +6,13 @@
     ?>
 
 
-
+<?php if( isConnected() && $role == 1){ ?>
 <a href="./delLocations.php">
     <button class="btn btn-danger">
         Tout supprimer
     </button>
 </a>
+<?php } ?>
 
 
 <div class="container"><br>
