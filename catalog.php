@@ -35,7 +35,7 @@
                         <div class="location-item d-flex justify-content-center">
                             <div id="location-div">
                                 <h3 class="location-title"> <?php echo $location['location_title']; ?></h3>
-                                <a href="<?php echo "location/" . urlencode($_GET["name"]);?>">
+                                <a href="<?php echo "location/" . urlencode($location["location_title"])  ;?>">
                                     <button class="btn btn-info">Ouvrir</button>
                                 </a>
                             </div>
