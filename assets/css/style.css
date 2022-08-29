@@ -541,5 +541,5 @@ h1{
 #location-validated{
   text-align: center;
   font-weight: bold;
-  height: 100vh;
+  padding-bottom: 100vh;
 }
