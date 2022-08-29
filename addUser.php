@@ -140,13 +140,6 @@ if(count($errors) == 0){
 	header("Location: ./index.php");	
 
 }else{
-
 	$_SESSION['errors'] = $errors;
 	header("Location: ./register.php");
 }
-
-
-//Si aucune erreur insérer l'utilisateur en base de données puis rediriger sur la page de connexion
-
-
-//Si il y a des erreurs rediriger sur la page d'inscription et afficher les erreurs

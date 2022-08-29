@@ -536,3 +536,10 @@ h1{
   text-align: center;
   margin-bottom: 20px;
 }
+
+
+#location-validated{
+  text-align: center;
+  font-weight: bold;
+  height: 100vh;
+}

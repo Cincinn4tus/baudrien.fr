@@ -7,7 +7,7 @@ require "functions.php";
 $rentPrice = $_SESSION["rent_price"];
 $rentSeller =  $_SESSION["seller"];
 $rentBuyer = $_SESSION["rent_buyer"];
-$rentDate = date();
+$rentDate = date('Y-m-d');
 
 
 
@@ -38,5 +38,5 @@ $rentDate = date();
 
 						
 
-	header("Location: ./index.php");
+	header("Location: ./rentValidated.php");
 ?>
