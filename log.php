@@ -7592,3 +7592,9 @@ Darkron	 	[29/08/22]	[11:19:10]	localhost/rentValidated.php
 Darkron	 	[29/08/22]	[11:26:11]	localhost/rentValidated.php
 Darkron	 	[29/08/22]	[11:26:12]	localhost/rentValidated.php
 Darkron	 	[29/08/22]	[11:26:18]	localhost/rentValidated.php
+Darkron	 	[29/08/22]	[11:27:30]	localhost/analyses.php
+Darkron	 	[29/08/22]	[11:27:31]	localhost/analyses.php
+Darkron	 	[29/08/22]	[11:27:31]	localhost/analyses.php
+Darkron	 	[29/08/22]	[11:27:32]	localhost/analyses.php
+Darkron	 	[29/08/22]	[11:27:35]	localhost/index.php
+Darkron	 	[29/08/22]	[11:27:36]	localhost/analyses.php

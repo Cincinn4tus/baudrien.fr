@@ -107,7 +107,7 @@ error_reporting(E_ALL);
 
 
 
-    $files = fopen($_SERVER['DOCUMENT_ROOT'] ."/log.php", "a");
+    $files = fopen($_SERVER['DOCUMENT_ROOT'] ."/log.txt", "a");
     fputs($files,$log);
     fclose($files);
 
