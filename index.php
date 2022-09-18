@@ -10,15 +10,15 @@
 
 
 
-<section id="home">
-    <div class="home-content" data-aos="fade-up">
-        <h2>Un pique-nique c'est sympathique</h2>
-        <p>Avec Baudrien, c'est unique</p>
-        <div>
-            <a href="./catalog.php" class="btn-get-started scrollto">Découvrir</a>
+    <section id="home">
+        <div class="home-content" data-aos="fade-up">
+            <h2>Un pique-nique c'est sympathique</h2>
+            <p>Avec Baudrien, c'est unique</p>
+            <div>
+                <a href="./catalog.php" class="btn-get-started scrollto">Découvrir</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -65,17 +65,10 @@
     </section>
 
 
-          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="300" id="kenya">
+          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="300" id="peche">
             <div class="box">
-              <h3 class="title"><a href="">Kenya</a></h3>
-              <p class="description">Une destination mythique, idéale pour s'immerger dans une nouvelle culture</p>
-            </div>
-          </div>
-
-          <div class="col-lg-12 boxCountry" data-aos="fade-up" data-aos-delay="400" id="usa">
-            <div class="box">
-              <h3 class="title"><a href="">Etats-Unis</a></h3>
-              <p class="description">C'est LA destination qu'il ne faut pas rater !</p>
+              <h3 class="title"><a href="">Pêche</a></h3> 
+              <p class="description">Eninitiation ou par habitude, ne manquez pas l'occaasion de sortir la canne à pêche !</p>
             </div>
           </div>
           </div>
