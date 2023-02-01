@@ -7,11 +7,6 @@
     $mainTitle = "Accueil";
     include ($_SERVER['DOCUMENT_ROOT'] ."/assets/templates/header.php");
     ?>
-
-
-
-
-
     <section id="home">
         <div class="home-content" data-aos="fade-up">
             <h2>Un pique-nique c'est sympathique</h2>

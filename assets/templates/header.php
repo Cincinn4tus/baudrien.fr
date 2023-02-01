@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="canonical" href="http://baudrien.fr/" />
   </head>
-
-
-
-
   <header>
         <div class="container-fluid" id="main-navbar">
             <div class="row">
