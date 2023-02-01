@@ -1,3 +1,5 @@
+
+    <code><meta name="robots" content="index, nofollow"></code>
 <?php
 
     session_start();
